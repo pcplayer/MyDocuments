@@ -48,7 +48,7 @@ plt.show();  # 这句话会弹出个窗口出来，里面是上述数据的曲�
 ![MyPythonPic3](MyPythonPic3.png)
 
 ### 以下是运行期界面
-![MyPythonPic4](MyPythonPic4)
+![MyPythonPic4](MyPythonPic4.png)
 
 # 结论：
 用 Delphi 做数据库操作，然后需要根据数据画出图表来的时候，虽然 Delphi 有 TChat 之类的画图表的控件可以用，但也可以使用 Python 的库，可以获得更多的画图表的功能。
