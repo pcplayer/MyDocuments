@@ -17,7 +17,7 @@ plt.show();  # 这句话会弹出个窗口出来，里面是上述数据的曲�
 
 运行结果如图：
 
-!(MyPythonPic1.png)
+!(https://github.com/pcplayer/MyDocuments/blob/main/MyPythonPic1.png?raw=true)
 
 ### 在 Delphi 的程序里面调用上述 Python 代码画图
 1. 创建一个 VCL 程序。
@@ -36,7 +36,7 @@ begin
 end;
 ~~~
 6. 点击 Delphi IDE 上面的三角形按钮（Run），程序运行。在运行的程序上面点那个按钮，Python 代码被执行，Python 的画图库 matplotlib 弹出窗口。运行结果如图：
-!(MyPythonPic2.png)
+!(https://github.com/pcplayer/MyDocuments/blob/main/MyPythonPic2.png?raw=true)
 
 ## 问题
 看上面描述的步骤，很简单，就可以使用 Delphi 程序调用 Python 的库。前后只要几分钟就搞定。
