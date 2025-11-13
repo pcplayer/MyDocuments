@@ -9,9 +9,21 @@
 这里使用开源的 https://github.com/EtheaDev/MarkdownProcessor
 
 ## 如何显示图片
-Markdown 文本里面的图片，被转换为 HTML 格式的文本后，图片描述变成了 <img src="MyPic.jpg" /> 这样的标记。如果我把转换后的 HTML 保存为文件，并且这个 HTML 文件和原来的 Markdown 文件在同一个文件夹底下，也就是和图片文件在同一个文件夹底下，则浏览器加载这个 HTML 文件后，应该能够加载并显示图片。
+Markdown 文本里面的图片，被转换为 HTML 格式的文本后，图片描述变成了
+~~~
+ <img src="MyPic.jpg" /> 
+~~~
+这样的标记。如果我把转换后的 HTML 保存为文件，并且这个 HTML 文件和原来的 Markdown 文件在同一个文件夹底下，也就是和图片文件在同一个文件夹底下，则浏览器加载这个 HTML 文件后，应该能够加载并显示图片。
 
-但是，我不想在文件夹里面产生额外的文件。我想把转换后的 HTML 内容作为字符串直接让浏览器显示。因此，就需要把 <img src="MyPic.jpg" /> 这样的标记，替换为 <img src="data:image/jpeg;base64,xxxxx"> 这样的内容。
+但是，我不想在文件夹里面产生额外的文件。我想把转换后的 HTML 内容作为字符串直接让浏览器显示。因此，就需要把
+~~~ 
+<img src="MyPic.jpg" />
+~~~ 
+这样的标记，替换为 
+~~~
+<img src="data:image/jpeg;base64,xxxxx"> 
+~~~
+这样的内容。
 
 为此，这里专门写了一段代码用于对图片进行处理。代码如下：
 ~~~
