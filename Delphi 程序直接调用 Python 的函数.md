@@ -1,4 +1,4 @@
-Delphi 程序直接调用 Python 的函数
+﻿# Delphi 程序直接调用 Python 的函数
 在本系列的第一篇博客文章：Delphi 程序员初学 Python 笔记-CSDN博客
 
 在这篇文章里面，我提到，一个 Python 的函数，我用 Delphi 无法直接调用它，所以我对它做了一个 Python 的包装。原因是，那是我第一次学习使用 Python4Delphi 这个控件。那时候要执行 Python 代码，我只会使用 PythonEngine1.ExecStrings(Python代码) 这样的方式。这样做，就是在 Delphi 的程序里面，加载了 Python 的环境，并在这个环境里面去执行了代码里面的可执行的部分。但如果代码里面有函数，而这个函数并没有 Python 代码去调用它，Python 环境里面也无法执行这个函数。

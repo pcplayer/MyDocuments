@@ -1,8 +1,8 @@
-# Delphi 里的接口聚合的写法
+﻿# Delphi 里的接口聚合的写法
 
 本程序演示接口委托聚合：
   TMyClass 拥有并实现了 IMyTask 接口
-  TMyPlan 类拥有 IMyTask 接口，但没有去实现这个接口里的 SayHell 方法，而是通过
+  TMyPlan 类拥有 IMyTask 接口，但没有去实现这个接口里的 SayHello 方法，而是通过
   property MyTask: IMyTask read FMyClass implements IMyTask; 语句，将这个实现委托给内部的 FMyClass 接口实现。
  
   传统的面向类的代码，当做一个包装类，包装多个子类在里面的时候，要在包装类的 public 里
@@ -90,9 +90,7 @@ type
   end;
  
   TMyClass = class(TInterfacedObject, IMyTask)
- 
   private
- 
   public
     function SayHello: string;
   end;
@@ -104,9 +102,7 @@ type
  
  
   TMyPlan = class(TInterfacedObject, IMyTask, IMyTest)
- 
   private
- 
     FMyClass: IMyTask;
     FMyClassB: IMyTest;
   public
@@ -118,20 +114,12 @@ type
   end;
  
   TForm1 = class(TForm)
- 
     Button1: TButton;
- 
     Label1: TLabel;
- 
     procedure Button1Click(Sender: TObject);
- 
   private
  
-    { Private declarations }
- 
   public
- 
-    { Public declarations }
  
   end;
  
@@ -148,11 +136,8 @@ implementation
  
  
 function TMyClass.SayHello: string;
- 
 begin
- 
   Result := 'Hello';
- 
 end;
 
 {TMyClassB} 
@@ -165,29 +150,19 @@ end;
 { TMyPlan }
  
 constructor TMyPlan.Create;
- 
 begin
- 
   inherited;
  
   FMyClass := TMyClass.Create as IMyTask;
- 
 end;
  
 procedure TForm1.Button1Click(Sender: TObject);
- 
 var
- 
   MyPlan: IMyTask;
- 
 begin
- 
   MyPlan := TMyPlan.Create;
- 
   Label1.Caption := MyPlan.SayHello;
- 
   MyPlan := nil;
- 
 end;
  
 end.
